@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey form to adopt a pet</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+	<h1 id="title">Adopt a pet registration</h1>
+    <p id="description">Please fill out this form with the required information</p>
+    <form id="survey-form">
+        <label for="name" id="name-label">Enter your name<input id="name" type="text" placeholder="Firstname Lastname" required></label>
+        <label for="email" id="email-label">Enter your email<input id="email" type="email" placeholder="name@company.com" required></label>
+        <label for="number" id="number-label">How many pets do you already have?<input id="number" type="number" min="0" max="100" placeholder="0-100"></label>
+        <label for="dropdown" id="dropdown-label">Preferred type of pet</label>
+        
+        <select id="dropdown" name="pet-type">
+            <option value="">(select one)</option>
+            <option value="1">Cat</option>
+            <option value="2">Dog</option>
+            <option value="3">Bird</option>
+            <option value="4">Fish</option>
+            <option value="5">Other</option>
+        </select>
+        
+        <fieldset id="experience">
+            <label for="first-time"><input type="radio" id="first-time" name="experience" value="first-time" class="inline"/>First time pet owner</label>
+            <label for="experienced"><input type="radio" id="experienced" name="experience" value="experienced" class="inline"/>Experienced pet owner</label>
+        </fieldset>
+
+        <fieldset>
+            <label for="morning"> <input id="morning" type="checkbox" name="contact-time" value="morning" class="inline"/>Contact me in the morning</label>
+            <label for="afternoon"><input id="afternoon" type="checkbox" name="contact-time" value="afternoon" class="inline"/>Contact me in the afternoon</label>
+            <label for="evening"><input id="evening" type="checkbox" name="contact-time" value="evening" class="inline"/>Contact me in the evening</label>
+        </fieldset>
+        
+        <label for="info">Any additional information:
+            <textarea id="info" name="info" placeholder="I am really good with sausage dogs..."></textarea>
+          </label>
+          <input type="submit" id="submit" />
+        </form>
+  </body>
+</html>
